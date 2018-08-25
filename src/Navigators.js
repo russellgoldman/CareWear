@@ -10,7 +10,12 @@ import TabC from './TabC'
 */
 
 export const Stack = createStackNavigator({
-  HomeScreen: { screen: HomeScreen },
+  HomeScreen: {
+    screen: HomeScreen,
+    navigationOptions: {
+      header: null,
+    },
+  },
 }, {
   initialRouteName: 'HomeScreen',
 });

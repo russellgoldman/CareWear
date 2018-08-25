@@ -5576,6 +5576,10 @@ react-native-maps@0.21.0:
     babel-plugin-module-resolver "^2.3.0"
     babel-preset-react-native "1.9.0"
 
+react-native-responsive-image@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/react-native-responsive-image/-/react-native-responsive-image-2.3.1.tgz#3f8d3882061a8eae389d70a960e3e6436da9e354"
+
 react-native-safe-area-view@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.7.0.tgz#38f5ab9368d6ef9e5d18ab64212938af3ec39421"
