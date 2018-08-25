@@ -5,8 +5,8 @@ import { DrawerButton } from '../components';
 import { HomeScreenStyles } from '../styles';
 
 class HomeScreen extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       title: 'CareWear',
     };
@@ -32,12 +32,13 @@ class HomeScreen extends Component {
     return (
       <View style={homeScreenContainer}>
         <View style={headerBarContainer}>
-          <DrawerButton style={drawerButtonContainer} />
+          <DrawerButton style={drawerButtonContainer}
+            navigation={this.props.navigation} />
           <View style={titleContainer}>
             <Text style={titleStyle}>{this.state.title}</Text>
           </View>
           <View style={addUserContainer}>
-            <Text style={addUserStyle}>Add User</Text>
+            <Text style={addUserStyle}>Add Device</Text>
           </View>
         </View>
       </View>

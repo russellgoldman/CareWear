@@ -27,14 +27,14 @@ const styles = {
     flex: 1,
   },
   titleStyle: {
-    fontSize: 16,
+    fontSize: 15,
     color: '#3d3d3d',
     right: '0.5%',
     top: '4%',
   },
   addUserStyle: {
     fontSize: 13,
-    color: 'grey',
+    color: '#4871EE',
     top: '5%',
     left: '2%',
   },

@@ -9,7 +9,7 @@ import TabB from './TabB'
 import TabC from './TabC'
 */
 
-export const Stack = createStackNavigator({
+export const HomeStack = createStackNavigator({
   HomeScreen: {
     screen: HomeScreen,
     navigationOptions: {
@@ -31,6 +31,6 @@ export const Tabs = createTabNavigator({
 */
 
 export const Drawer = createDrawerNavigator({
-  Stack: { screen: Stack },
+  Home: { screen: HomeStack },
   // Tabs: { screen: Tabs },
 });
