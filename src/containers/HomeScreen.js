@@ -17,6 +17,35 @@ class HomeScreen extends Component {
     };
   }
 
+  renderStatus() {
+    var color = '#000';   // default
+    switch (this.state.status) {
+      case 'Safe':
+        color = '#6AB186';
+        break;
+      case 'Caution':
+        color = '#FFD976';
+        break;
+      case 'Danger':
+        color = '#FF7676';
+        break;
+    }
+    if (color !== '#000') {
+      return (
+        <Text style={{ paddingTop: '2%', fontSize: 25, fontWeight: 'bold', color: `${color}` }}>
+          {this.state.status}
+        </Text>
+      );
+    } else {
+      return (
+        <Text style={{ paddingTop: '2%', fontSize: 25, fontWeight: 'bold', color: '#000' }}>
+          N/A
+        </Text>
+      );
+    }
+
+  }
+
   render() {
     const {
       homeScreenContainer,
@@ -30,6 +59,7 @@ class HomeScreen extends Component {
       victimTopInfoContainer,
       victimImageContainer,
       victimNameStyle,
+      victimBottomInfoContainer,
       statusContainer,
     } = HomeScreenStyles;
 
@@ -55,14 +85,11 @@ class HomeScreen extends Component {
               <Text style={victimNameStyle}>{this.state.victimName}</Text>
             </View>
           </View>
-          <View style={{
-            flex: 2, flexDirection: 'row', alignItems: 'flex-start',
-            top: '2.5%',
-          }}>
+          <View style={victimBottomInfoContainer}>
             <View style={{ flex: 1 }} />
             <View style={statusContainer}>
-              <Text>CURRENT STATUS</Text>
-              <Text>{this.state.status}</Text>
+              <Text style={{ fontSize: 13, color: '#3d3d3d' }}>CURRENT STATUS</Text>
+              {this.renderStatus()}
             </View>
           </View>
           <View style={{ flex: 3 }}></View>

@@ -15,7 +15,6 @@ class DrawerButton extends Component {
   };
 
   render() {
-    console.log(this.props.navigation);
     const { imageContainer } = styles;
 
     return (

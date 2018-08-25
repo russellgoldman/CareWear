@@ -36,7 +36,7 @@ const styles = {
   addUserStyle: {
     fontSize: 13,
     color: '#4871EE',
-    left: '2%',
+    left: '15%',
   },
   victimTopInfoContainer: {
     display: 'flex',
@@ -54,16 +54,21 @@ const styles = {
   },
   victimNameStyle: {
     fontWeight: 'bold',
-    fontSize: 26,
+    fontSize: 28,
     right: '8%',
+  },
+  victimBottomInfoContainer: {
+    flex: 2,
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    top: '2.75%',
   },
   statusContainer: {
     flex: 1.5,
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     backgroundColor: '#fff',
     borderRadius: 15,
-    height: '40%',
-    paddingTop: '2.5%',
+    height: '37.5%',
     marginLeft: '6%',
     paddingLeft: '2.5%',
     marginRight: '6%',
