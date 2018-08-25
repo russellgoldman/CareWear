@@ -1,2 +1,2 @@
 # HackThe6ix2018
-Our currently unnamed project for HackThe6ix 2018
+Cheap proof of quality wearable technology to track external/internal environment of wearer to determine safety (meant for animals/infants)
