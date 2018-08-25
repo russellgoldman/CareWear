@@ -13,6 +13,7 @@ class HomeScreen extends Component {
     this.state = {
       title: 'CareWear',
       victimName: 'Roast Beef',
+      status: 'Safe',
     };
   }
 
@@ -29,6 +30,7 @@ class HomeScreen extends Component {
       victimTopInfoContainer,
       victimImageContainer,
       victimNameStyle,
+      statusContainer,
     } = HomeScreenStyles;
 
     return (
@@ -53,7 +55,15 @@ class HomeScreen extends Component {
               <Text style={victimNameStyle}>{this.state.victimName}</Text>
             </View>
           </View>
-          <View style={{ flex: 2 }}>
+          <View style={{
+            flex: 2, flexDirection: 'row', alignItems: 'flex-start',
+            top: '2.5%',
+          }}>
+            <View style={{ flex: 1 }} />
+            <View style={statusContainer}>
+              <Text>CURRENT STATUS</Text>
+              <Text>{this.state.status}</Text>
+            </View>
           </View>
           <View style={{ flex: 3 }}></View>
           <View style={{ flex: 2 }}></View>

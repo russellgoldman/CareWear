@@ -57,6 +57,17 @@ const styles = {
     fontSize: 26,
     right: '8%',
   },
+  statusContainer: {
+    flex: 1.5,
+    justifyContent: 'flex-start',
+    backgroundColor: '#fff',
+    borderRadius: 15,
+    height: '40%',
+    paddingTop: '2.5%',
+    marginLeft: '3.5%',
+    paddingLeft: '2.5%',
+    marginRight: '3.5%',
+  },
 };
 
 export default styles;
