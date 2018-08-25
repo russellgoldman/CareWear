@@ -1,46 +1,63 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ImageBackground } from 'react-native';
 import { Font } from 'expo';
-import { DrawerButton } from '../components';
+import ResponsiveImage from 'react-native-responsive-image';
+
+import { DrawerButton, TopWhiteSpace } from '../components';
 import { HomeScreenStyles } from '../styles';
+import { roastBeef, homeScreenBackground } from '../../assets/images';
 
 class HomeScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
       title: 'CareWear',
+      victimName: 'Roast Beef',
     };
-  }
-
-  componentDidMount() {
-    Font.loadAsync({
-      'open-sans-bold': require('../../assets/fonts/OpenSans/OpenSans-Bold.ttf'),
-    });
   }
 
   render() {
     const {
       homeScreenContainer,
+      backgroundImage,
       headerBarContainer,
       drawerButtonContainer,
       titleContainer,
-      addUserContainer,
       titleStyle,
+      addUserContainer,
       addUserStyle,
+      victimTopInfoContainer,
+      victimImageContainer,
+      victimNameStyle,
     } = HomeScreenStyles;
 
     return (
-      <View style={homeScreenContainer}>
-        <View style={headerBarContainer}>
-          <DrawerButton style={drawerButtonContainer}
-            navigation={this.props.navigation} />
-          <View style={titleContainer}>
-            <Text style={titleStyle}>{this.state.title}</Text>
+      <View style={{ flex: 1 }}>
+        <TopWhiteSpace />
+        <ImageBackground source={homeScreenBackground} style={homeScreenContainer}>
+          <View style={headerBarContainer}>
+            <DrawerButton style={drawerButtonContainer}
+              navigation={this.props.navigation} />
+            <View style={titleContainer}>
+              <Text style={titleStyle}>{this.state.title}</Text>
+            </View>
+            <View style={addUserContainer}>
+              <Text style={addUserStyle}>Add Device</Text>
+            </View>
           </View>
-          <View style={addUserContainer}>
-            <Text style={addUserStyle}>Add Device</Text>
+          <View style={victimTopInfoContainer}>
+            <View style={victimImageContainer}>
+              <ResponsiveImage source={roastBeef} initWidth="150" initHeight="150" />
+            </View>
+            <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}>
+              <Text style={victimNameStyle}>{this.state.victimName}</Text>
+            </View>
           </View>
-        </View>
+          <View style={{ flex: 2 }}>
+          </View>
+          <View style={{ flex: 3 }}></View>
+          <View style={{ flex: 2 }}></View>
+        </ImageBackground>
       </View>
     );
   }
