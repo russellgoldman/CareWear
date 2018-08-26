@@ -10,10 +10,10 @@ class AlertGroup extends Component {
     // props: statuses: ['status1', 'status2']
   }
 
-  renderSymbol(index) {
+  renderStatusImage(index) {
     if (this.props.statusArr[index] === 'Danger') {
       return (
-        <ResponsiveImage source={danger} initWidth="20" initHeight="20" />
+        <ResponsiveImage source={danger} initWidth="50" initHeight="50" />
       );
     } else {
       return (
@@ -25,22 +25,22 @@ class AlertGroup extends Component {
   render () {
     const {
       outerContainer,
-      alertContainer
+      alertContainerTop,
     } = styles;
 
     console.log(this.props.statusArr);
 
     return (
       <View style={outerContainer}>
-        <View style={alertContainer}>
-          <View>{this.renderSymbol(0)}</View>
-          <View>
+        <View style={alertContainerTop}>
+          <View style={{ flex: 1 }}>{this.renderStatusImage(0)}</View>
+          <View style={{ flex: 6 }}>
             <View></View>
             <View></View>
           </View>
         </View>
         <View>
-          <View>{this.renderSymbol(1)}</View>
+          <View>{this.renderStatusImage(1)}</View>
           <View>
             <View></View>
             <View></View>
@@ -62,8 +62,11 @@ const styles = {
     marginRight: '5%',
     top: '2%',
   },
-  alertContainer: {
+  alertContainerTop: {
     flex: 1,
+    borderBottomWidth: 1,
+    borderBottomColor: '#D7D7D7',
+    maxHeight: '50%',
   },
 };
 

@@ -23,7 +23,7 @@ class HomeScreen extends Component {
           notice: '+ 3 Degrees Celsius raise in temperature',
         },
         secondRecentAlert: {
-          status: 'At Risk',
+          status: 'Danger',
           date: 'August 12th, 2018',
           time: '9:12 PM',
           notice: '+ 3 Degrees Celsius raise in temperature',
