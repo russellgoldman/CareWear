@@ -54,7 +54,7 @@ const styles = {
   },
   victimNameStyle: {
     fontWeight: 'bold',
-    fontSize: 28,
+    fontSize: 30,
     right: '8%',
   },
   victimBottomInfoContainer: {
@@ -67,11 +67,12 @@ const styles = {
     flex: 1.5,
     justifyContent: 'center',
     backgroundColor: '#fff',
-    borderRadius: 15,
-    height: '37.5%',
+    borderRadius: 10,
+    height: '45%',
     marginLeft: '6%',
     paddingLeft: '2.5%',
     marginRight: '6%',
+    paddingTop: '0.5%',
   },
 };
 

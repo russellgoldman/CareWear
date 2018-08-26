@@ -4,9 +4,10 @@ const styles = {
     flex: 1,
     marginLeft: '5%',
     marginRight: '5%',
+    bottom: '2%',
   },
   currentStatsTextStyle: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
     color: '#fff',
   },
@@ -23,14 +24,20 @@ const styles = {
   },
   seeMoreStyle: {
     fontWeight: 'bold',
-    fontSize: 14,
+    fontSize: 12,
     color: '#fff',
     flex: 1,
-    left: '5%',
+    left: '20%',
   },
   statsGroup: {
     backgroundColor: '#fff',
     borderRadius: 15,
+    flex: 6,
+    bottom: '6%',
+  },
+  statsRow: {
+    flexDirection: 'row',
+    flex: 1,
   },
 };
 

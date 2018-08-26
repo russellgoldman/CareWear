@@ -25,7 +25,7 @@ class HomeScreen extends Component {
         color = '#6AB186';
         break;
       case 'Caution':
-        color = '#FFD976';
+        color = '#FFA800';
         break;
       case 'Danger':
         color = '#FF7676';
@@ -33,13 +33,13 @@ class HomeScreen extends Component {
     }
     if (color !== '#000') {
       return (
-        <Text style={{ paddingTop: '2%', fontSize: 25, fontWeight: 'bold', color: `${color}` }}>
+        <Text style={{ paddingTop: '3%', fontSize: 25, fontWeight: 'bold', color: `${color}` }}>
           {this.state.status}
         </Text>
       );
     } else {
       return (
-        <Text style={{ paddingTop: '2%', fontSize: 25, fontWeight: 'bold', color: '#000' }}>
+        <Text style={{ paddingTop: '3%', fontSize: 25, fontWeight: 'bold', color: '#000' }}>
           N/A
         </Text>
       );
@@ -95,7 +95,7 @@ class HomeScreen extends Component {
               {this.renderStatus()}
             </View>
           </View>
-          <View style={{ flex: 3 }}>
+          <View style={{ flex: 4, bottom: '5%', }}>
             <CurrentStats />
           </View>
           <View style={{ flex: 2 }}></View>
