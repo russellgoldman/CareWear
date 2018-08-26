@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, Alert, TouchableOpacity } from 'react-native';
 import ResponsiveImage from 'react-native-responsive-image';
 
 import { caution, danger } from '../../assets/images';
@@ -13,7 +13,18 @@ class AlertGroup extends Component {
   renderStatusImage(index, statusImageStyle) {
     if (this.props.statusArr[index] === 'Danger') {
       return (
-        <ResponsiveImage source={danger} initWidth="40" initHeight="40"/>
+        <TouchableOpacity onPress={() => {
+          Alert.alert(
+            'DANGER',
+            `We noticed a dangerous increase in temperature around ${this.props.victimName}. Please remove them from the situation immediately!`,
+            [
+              { text: 'I understand', onPress: () => console.log('OK Pressed') },
+            ],
+            { cancelable: false }
+          );
+        }}>
+          <ResponsiveImage source={danger} initWidth="40" initHeight="40"/>
+        </TouchableOpacity>
       );
     } else {
       return (

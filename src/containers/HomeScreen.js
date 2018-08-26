@@ -29,6 +29,7 @@ class HomeScreen extends Component {
           notice: '+ 3 Degrees Celsius raise in temperature',
         },
       },
+      prevStatus: 'Anything',
     };
   }
 
@@ -54,7 +55,7 @@ class HomeScreen extends Component {
     } else {
       return (
         <Text style={{ paddingTop: '2%', fontSize: 25, fontWeight: 'bold', color: '#000' }}>
-          N/A
+          Untracked
         </Text>
       );
     }
@@ -116,7 +117,8 @@ class HomeScreen extends Component {
                 <Text style={seeMoreStyle}>SEE MORE</Text>
               </TouchableOpacity>
             </View>
-            <AlertGroup statusArr={statusArr} mostRecentAlert={mostRecentAlert} secondRecentAlert={secondRecentAlert} />
+            <AlertGroup statusArr={statusArr} mostRecentAlert={mostRecentAlert} secondRecentAlert={secondRecentAlert}
+              victimName={this.state.victimName} />
           </View>
         </ImageBackground>
       </View>
