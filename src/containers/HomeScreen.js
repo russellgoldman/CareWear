@@ -98,7 +98,9 @@ class HomeScreen extends Component {
           <View style={{ flex: 4, bottom: '5%', }}>
             <CurrentStats />
           </View>
-          <View style={{ flex: 2 }}></View>
+          <View style={{ flex: 2 }}>
+            <Text style={{ fontSize: 13, color: '#3d3d3d' }}>CURRENT STATUS</Text>
+          </View>
         </ImageBackground>
       </View>
     );

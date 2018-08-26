@@ -3,7 +3,7 @@ import { View } from 'react-native';
 
 const TopWhiteSpace = () => {
   return (
-    <View style={{ height: '4%', backgroundColor: '#fff' }}/>
+    <View style={{ height: '6%', backgroundColor: '#fff' }}/>
   );
 };
 
