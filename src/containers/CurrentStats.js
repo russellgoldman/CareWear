@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import ResponsiveImage from 'react-native-responsive-image';
 
 import { VariableGroup } from '../components';
@@ -56,7 +56,9 @@ class CurrentStats extends Component {
           <Text style={lastUpdatedStyle}>
             {`Last updated at ${this.state.time} on ${this.state.date}`}
           </Text>
-          <Text style={seeMoreStyle}>SEE MORE</Text>
+          <TouchableOpacity onPress={() => { console.log('See more!') }}>
+            <Text style={seeMoreStyle}>SEE MORE</Text>
+          </TouchableOpacity>
         </View>
         <View style={statsGroup}>
           <View style={statsRow}>

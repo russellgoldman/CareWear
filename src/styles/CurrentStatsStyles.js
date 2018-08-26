@@ -27,7 +27,6 @@ const styles = {
     fontSize: 12,
     color: '#fff',
     flex: 1,
-    left: '20%',
   },
   statsGroup: {
     backgroundColor: '#fff',
