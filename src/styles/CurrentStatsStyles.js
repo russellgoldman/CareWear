@@ -31,8 +31,8 @@ const styles = {
   statsGroup: {
     backgroundColor: '#fff',
     borderRadius: 15,
-    flex: 6,
-    bottom: '6%',
+    flex: 7,
+    bottom: '4%',
   },
   statsRow: {
     flexDirection: 'row',

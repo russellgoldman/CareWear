@@ -13,7 +13,7 @@ class HomeScreen extends Component {
     super(props);
     this.state = {
       title: 'CareWear',
-      victimName: 'Roast Beef',
+      victimName: 'Baxter',
       status: 'Safe',
     };
   }
@@ -33,13 +33,13 @@ class HomeScreen extends Component {
     }
     if (color !== '#000') {
       return (
-        <Text style={{ paddingTop: '3%', fontSize: 25, fontWeight: 'bold', color: `${color}` }}>
+        <Text style={{ paddingTop: '2%', fontSize: 25, fontWeight: 'bold', color: `${color}` }}>
           {this.state.status}
         </Text>
       );
     } else {
       return (
-        <Text style={{ paddingTop: '3%', fontSize: 25, fontWeight: 'bold', color: '#000' }}>
+        <Text style={{ paddingTop: '2%', fontSize: 25, fontWeight: 'bold', color: '#000' }}>
           N/A
         </Text>
       );
@@ -84,7 +84,7 @@ class HomeScreen extends Component {
             <View style={victimImageContainer}>
               <ResponsiveImage source={roastBeef} initWidth="150" initHeight="150" />
             </View>
-            <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}>
+            <View style={{ flex: 2, justifyContent: 'center', alignItems: 'flex-start' }}>
               <Text style={victimNameStyle}>{this.state.victimName}</Text>
             </View>
           </View>
