@@ -62,6 +62,9 @@ class HomeScreen extends Component {
       victimNameStyle,
       victimBottomInfoContainer,
       statusContainer,
+      alertTitleRow,
+      recentAlertsTextStyle,
+      seeMoreStyle,
     } = HomeScreenStyles;
 
     return (
@@ -98,8 +101,13 @@ class HomeScreen extends Component {
           <View style={{ flex: 4, bottom: '5%', }}>
             <CurrentStats />
           </View>
-          <View style={{ flex: 2 }}>
-            <Text style={{ fontSize: 13, color: '#3d3d3d' }}>CURRENT STATUS</Text>
+          <View style={{ flex: 2.2, bottom: '3%', }}>
+            <View style={alertTitleRow}>
+              <Text style={recentAlertsTextStyle}>Recent Alerts</Text>
+              <TouchableOpacity style={{ display: 'flex', justifyContent: 'center' }} onPress={() => { console.log('See more!') }}>
+                <Text style={seeMoreStyle}>SEE MORE</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </ImageBackground>
       </View>
