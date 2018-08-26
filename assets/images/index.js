@@ -9,6 +9,8 @@ import humidity from './humidity.png';
 import gas from './gas.png';
 import caution from './caution.png';
 import danger from './danger.png';
+import currentStats from './currentStats.png';
+import alertLog from './alertLog.png';
 
 export {
   hamburger,
@@ -22,4 +24,6 @@ export {
   gas,
   caution,
   danger,
+  currentStats,
+  alertLog,
 };

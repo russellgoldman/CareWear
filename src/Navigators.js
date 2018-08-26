@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { createDrawerNavigator, createStackNavigator, createTabNavigator } from 'react-navigation';
 
-import { HomeScreen } from './containers';
+import { HomeScreen, CurrentStatsInformation, AlertLog } from './containers';
 
 /*
 import TabA from './TabA'
@@ -31,6 +31,7 @@ export const Tabs = createTabNavigator({
 */
 
 export const Drawer = createDrawerNavigator({
-  Home: { screen: HomeStack },
-  // Tabs: { screen: Tabs },
+  'Home': { screen: HomeStack },
+  'Current Stats': { screen: CurrentStatsInformation },
+  'Alert Logs': { screen: AlertLog },
 });

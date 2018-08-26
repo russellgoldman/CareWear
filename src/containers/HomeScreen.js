@@ -3,7 +3,7 @@ import { View, Text, ImageBackground, TouchableOpacity } from 'react-native';
 import { Font } from 'expo';
 import ResponsiveImage from 'react-native-responsive-image';
 
-import { CurrentStats, AlertGroup } from '../containers';
+import { CurrentStats, AlertGroup, HeaderBar } from '../containers';
 import { DrawerButton, TopWhiteSpace } from '../components';
 import { HomeScreenStyles } from '../styles';
 import { roastBeef, homeScreenBackground } from '../../assets/images';
@@ -12,7 +12,6 @@ class HomeScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'CareWear',
       victimName: 'Baxter',
       status: 'Safe',
       alertState: {
@@ -64,12 +63,6 @@ class HomeScreen extends Component {
     const {
       homeScreenContainer,
       backgroundImage,
-      headerBarContainer,
-      drawerButtonContainer,
-      titleContainer,
-      titleStyle,
-      addUserContainer,
-      addUserStyle,
       victimTopInfoContainer,
       victimImageContainer,
       victimNameStyle,
@@ -91,18 +84,7 @@ class HomeScreen extends Component {
       <View style={{ flex: 1 }}>
         <TopWhiteSpace />
         <ImageBackground source={homeScreenBackground} style={homeScreenContainer}>
-          <View style={headerBarContainer}>
-            <DrawerButton style={drawerButtonContainer}
-              navigation={this.props.navigation} />
-            <View style={titleContainer}>
-              <Text style={titleStyle}>{this.state.title}</Text>
-            </View>
-            <TouchableOpacity style={addUserContainer} onPress={() => {
-              console.log('Go to add device screen!');
-            }}>
-              <Text style={addUserStyle}>Add Device</Text>
-            </TouchableOpacity>
-          </View>
+          <HeaderBar navigation={this.props.navigation} />
           <View style={victimTopInfoContainer}>
             <View style={victimImageContainer}>
               <ResponsiveImage source={roastBeef} initWidth="150" initHeight="150" />
