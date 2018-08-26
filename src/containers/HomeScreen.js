@@ -3,7 +3,7 @@ import { View, Text, ImageBackground, TouchableOpacity } from 'react-native';
 import { Font } from 'expo';
 import ResponsiveImage from 'react-native-responsive-image';
 
-import { CurrentStats } from '../containers';
+import { CurrentStats, AlertGroup } from '../containers';
 import { DrawerButton, TopWhiteSpace } from '../components';
 import { HomeScreenStyles } from '../styles';
 import { roastBeef, homeScreenBackground } from '../../assets/images';
@@ -80,6 +80,13 @@ class HomeScreen extends Component {
       seeMoreStyle,
     } = HomeScreenStyles;
 
+    var statusArr = [
+      this.state.alertState.mostRecentAlert.status,
+      this.state.alertState.secondRecentAlert.status,
+    ];
+
+    var { mostRecentAlert, secondRecentAlert } = this.state.alertState;
+
     return (
       <View style={{ flex: 1 }}>
         <TopWhiteSpace />
@@ -114,13 +121,14 @@ class HomeScreen extends Component {
           <View style={{ flex: 4, bottom: '5%', }}>
             <CurrentStats />
           </View>
-          <View style={{ flex: 2.2, bottom: '3%', }}>
+          <View style={{ flex: 2.2, bottom: '5.5%', }}>
             <View style={alertTitleRow}>
               <Text style={recentAlertsTextStyle}>Recent Alerts</Text>
-              <TouchableOpacity style={{ display: 'flex', justifyContent: 'center' }} onPress={() => { console.log('See more!') }}>
+              <TouchableOpacity style={{ display: 'flex', justifyContent: 'center' }} onPress={() => { console.log('See more!'); }}>
                 <Text style={seeMoreStyle}>SEE MORE</Text>
               </TouchableOpacity>
             </View>
+            <AlertGroup statusArr={statusArr} mostRecentAlert={mostRecentAlert} secondRecentAlert={secondRecentAlert} />
           </View>
         </ImageBackground>
       </View>

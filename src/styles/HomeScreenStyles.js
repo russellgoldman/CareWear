@@ -77,8 +77,9 @@ const styles = {
   alertTitleRow: {
     display: 'flex',
     flexDirection: 'row',
-    flex: 1,
+    flex: 0.25,
     justifyContent: 'center',
+    alignItems: 'center',
     marginLeft: '5%',
     marginRight: '6%',
   },
@@ -87,6 +88,7 @@ const styles = {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#fff',
+    top: '1%',
   },
   seeMoreStyle: {
     flex: 1,
@@ -94,7 +96,7 @@ const styles = {
     fontSize: 12,
     color: '#fff',
     flex: 1,
-    top: '3%',
+    top: '45%',
   },
 };
 
