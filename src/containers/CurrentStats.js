@@ -14,8 +14,8 @@ import {
 } from '../../assets/images';
 
 class CurrentStats extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       time: '11:52AM',
       date: '12/03/18',
@@ -56,7 +56,9 @@ class CurrentStats extends Component {
           <Text style={lastUpdatedStyle}>
             {`Last updated at ${this.state.time} on ${this.state.date}`}
           </Text>
-          <TouchableOpacity onPress={() => { console.log('See more!') }}>
+          <TouchableOpacity onPress={() => {
+            this.props.navigation.navigate('CurrentStats');
+          }}>
             <Text style={seeMoreStyle}>SEE MORE</Text>
           </TouchableOpacity>
         </View>

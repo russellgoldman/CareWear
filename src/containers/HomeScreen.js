@@ -101,12 +101,14 @@ class HomeScreen extends Component {
             </View>
           </View>
           <View style={{ flex: 4, bottom: '5%', }}>
-            <CurrentStats />
+            <CurrentStats navigation={this.props.navigation}/>
           </View>
           <View style={{ flex: 2.2, bottom: '5.5%', }}>
             <View style={alertTitleRow}>
               <Text style={recentAlertsTextStyle}>Recent Alerts</Text>
-              <TouchableOpacity style={{ display: 'flex', justifyContent: 'center' }} onPress={() => { console.log('See more!'); }}>
+              <TouchableOpacity style={{ display: 'flex', justifyContent: 'center' }} onPress={() => {
+                this.props.navigation.navigate('AlertLogs');
+              }}>
                 <Text style={seeMoreStyle}>SEE MORE</Text>
               </TouchableOpacity>
             </View>

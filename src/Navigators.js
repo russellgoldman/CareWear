@@ -16,6 +16,18 @@ export const HomeStack = createStackNavigator({
       header: null,
     },
   },
+  CurrentStats: {
+    screen: CurrentStatsInformation,
+    navigationOptions: {
+      header: null,
+    },
+  },
+  AlertLogs: {
+    screen: AlertLog,
+    navigationOptions: {
+      header: null,
+    },
+  },
 }, {
   initialRouteName: 'HomeScreen',
 });
