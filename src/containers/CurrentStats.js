@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import ResponsiveImage from 'react-native-responsive-image';
+import { NavigationActions } from 'react-navigation';
 
 import { VariableGroup } from '../components';
 import { CurrentStatsStyles } from '../styles';
@@ -57,7 +58,10 @@ class CurrentStats extends Component {
             {`Last updated at ${this.state.time} on ${this.state.date}`}
           </Text>
           <TouchableOpacity onPress={() => {
-            this.props.navigation.navigate('CurrentStats');
+            var navigate = NavigationActions.navigate({
+              routeName: 'Current Stats',
+            });
+            this.props.navigation.navigate(navigate);
           }}>
             <Text style={seeMoreStyle}>SEE MORE</Text>
           </TouchableOpacity>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, ImageBackground, TouchableOpacity } from 'react-native';
 import { Font } from 'expo';
 import ResponsiveImage from 'react-native-responsive-image';
+import { NavigationActions } from 'react-navigation';
 
 import { CurrentStats, AlertGroup, HeaderBar } from '../containers';
 import { DrawerButton, TopWhiteSpace } from '../components';
@@ -107,7 +108,10 @@ class HomeScreen extends Component {
             <View style={alertTitleRow}>
               <Text style={recentAlertsTextStyle}>Recent Alerts</Text>
               <TouchableOpacity style={{ display: 'flex', justifyContent: 'center' }} onPress={() => {
-                this.props.navigation.navigate('AlertLogs');
+                var navigate = NavigationActions.navigate({
+                  routeName: 'Alert Logs',
+                });
+                this.props.navigation.navigate(navigate);
               }}>
                 <Text style={seeMoreStyle}>SEE MORE</Text>
               </TouchableOpacity>
