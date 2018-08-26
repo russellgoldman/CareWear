@@ -94,7 +94,7 @@ const styles = {
     fontSize: 12,
     color: '#fff',
     flex: 1,
-    top: '2.5%',
+    top: '3%',
   },
 };
 

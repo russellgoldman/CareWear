@@ -15,6 +15,20 @@ class HomeScreen extends Component {
       title: 'CareWear',
       victimName: 'Baxter',
       status: 'Safe',
+      alertState: {
+        mostRecentAlert: {
+          status: 'Caution',
+          date: 'August 12th, 2018',
+          time: '9:12 PM',
+          notice: '+ 3 Degrees Celsius raise in temperature',
+        },
+        secondRecentAlert: {
+          status: 'At Risk',
+          date: 'August 12th, 2018',
+          time: '9:12 PM',
+          notice: '+ 3 Degrees Celsius raise in temperature',
+        },
+      },
     };
   }
 
@@ -44,7 +58,6 @@ class HomeScreen extends Component {
         </Text>
       );
     }
-
   }
 
   render() {
