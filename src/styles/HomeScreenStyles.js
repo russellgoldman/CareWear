@@ -42,7 +42,7 @@ const styles = {
     display: 'flex',
     flex: 0.6,
     flexDirection: 'row',
-    borderBottomRightRadius: 30,
+    borderBottomRightRadius: 25,
     backgroundColor: '#fff',
   },
   victimImageContainer: {

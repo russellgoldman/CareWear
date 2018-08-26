@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { View, Text, ImageBackground } from 'react-native';
+import { View, Text, ImageBackground, TouchableOpacity } from 'react-native';
 import { Font } from 'expo';
 import ResponsiveImage from 'react-native-responsive-image';
 
+import { CurrentStats } from '../containers';
 import { DrawerButton, TopWhiteSpace } from '../components';
 import { HomeScreenStyles } from '../styles';
 import { roastBeef, homeScreenBackground } from '../../assets/images';
@@ -73,9 +74,11 @@ class HomeScreen extends Component {
             <View style={titleContainer}>
               <Text style={titleStyle}>{this.state.title}</Text>
             </View>
-            <View style={addUserContainer}>
+            <TouchableOpacity style={addUserContainer} onPress={() => {
+              console.log('Go to add device screen!');
+            }}>
               <Text style={addUserStyle}>Add Device</Text>
-            </View>
+            </TouchableOpacity>
           </View>
           <View style={victimTopInfoContainer}>
             <View style={victimImageContainer}>
@@ -92,7 +95,9 @@ class HomeScreen extends Component {
               {this.renderStatus()}
             </View>
           </View>
-          <View style={{ flex: 3 }}></View>
+          <View style={{ flex: 3 }}>
+            <CurrentStats />
+          </View>
           <View style={{ flex: 2 }}></View>
         </ImageBackground>
       </View>
