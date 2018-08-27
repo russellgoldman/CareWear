@@ -8,4 +8,4 @@ Cheap proof of quality wearable technology to track external/internal environmen
 
 # Live test the app!
 **Note:** The app is currently only optimized for *iOS* so make sure to select the **iOS platform** if it doesn't automatically show!
-<br /><a target="_blank" href="https://snack.expo.io/@git/github.com/russellgoldman/CareWear?session_id=snack-session-H1HXl1MDX">Live test!</a>
+https://snack.expo.io/@git/github.com/russellgoldman/CareWear?session_id=snack-session-H1HXl1MDX
