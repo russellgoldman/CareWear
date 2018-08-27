@@ -5,3 +5,6 @@ Cheap proof of quality wearable technology to track external/internal environmen
 - React Native (Mobile App): Russell Goldman
 - Arduino (Wearable Sensor Technology): Matt Gaiser
 - Sketch / Figma (Mobile UI/UX Design): Grace Ma
+
+# Live-Test the App!
+https://snack.expo.io/@git/github.com/russellgoldman/CareWear?session_id=snack-session-H1HXl1MDX
